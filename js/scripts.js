@@ -1,11 +1,18 @@
-jQuery("h1").click(function() {
-  alert("This is a header.");
-});
+$(document).ready(function() {
+  var elements = ["h1", "p", "img"]
 
-jQuery("p").click(function() {
-  alert("This is a paragraph.");
-});
+  elements.forEach(function(element) {
+    $(element).click(function() {
+      if (element === "h1") {
+        alert("This is a header bro!")
+      } else if (element === "p") {
+        alert("This is a paragraph dude!")
+      } else if (element === "img") {
+        alert("This is an image man!")
+      } else {
+        alert("Uhh I don't know what that is!")
+      }
+    });
+  });
 
-jQuery("img").click(function() {
-  alert("This is an image.");
 });
